@@ -8,7 +8,7 @@ public class Principal {
        MergeSort objOrdenacao = new MergeSort();
        Grafico objGrafico;
 
-       XYSeries series = new XYSeries("Complexidade Algoritmo Merge Sort");
+       XYSeries series = new XYSeries("Complexidade Algoritimo Merge Sort");
 
        for(int tamanho = 100; tamanho < 1000; tamanho = tamanho + 100){
            int vetor[] = new int[tamanho];
@@ -20,11 +20,10 @@ public class Principal {
            int quantidade = objOrdenacao.mergeSort(vetor);
 
            series.add(tamanho, quantidade);
-           System.out.println("Quantidade de buscas" + quantidade);
+           System.out.println("Quantidade de buscas: " + quantidade);
        }
 
        objGrafico = new Grafico(series);
-       System.out.println("Grafico gerado com sucesso!");
-
+       System.out.println("Gráfico gerado com sucesso!");
    }
 }
